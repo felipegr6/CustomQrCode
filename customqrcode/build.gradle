@@ -1,6 +1,30 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'CustomQrCode'
+
+    publishedGroupId = 'br.fgr.customqrcode'
+    libraryName = 'CustomQrCode'
+    artifact = 'customqrcode'
+
+    libraryDescription = 'Android library for build QrCodes with inside images.'
+
+    siteUrl = 'https://github.com/felipegr6/CustomQrCode'
+    gitUrl = 'https://github.com/felipegr6/CustomQrCode.git'
+
+    libraryVersion = '1.0'
+
+    developerId = 'felipegr6'
+    developerName = 'Felipe Rocha'
+    developerEmail = 'felipegr6@gmail.com'
+
+    licenseName = 'The 3-Clause BSD License'
+    licenseUrl = 'https://opensource.org/licenses/BSD-3-Clause'
+    allLicenses = ["BSD 3-Clause"]
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
@@ -21,8 +45,12 @@ android {
         }
     }
     compileOptions {
+        encoding "UTF-8"
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
+    }
+    lintOptions {
+        abortOnError false
     }
 }
 
@@ -39,3 +67,6 @@ dependencies {
 repositories {
     mavenCentral()
 }
+
+apply from: rootProject.file('gradle/installv1.gradle')
+apply from: rootProject.file('gradle/bintrayv1.gradle')
