@@ -13,21 +13,21 @@ dependencies {
 
 How To Use
 ----------
-```
-    CustomQrCode.Builder builder = CustomQrCode.Builder(Context context, ImageView imgQrCode, String text);
+```java
+CustomQrCode.Builder builder = CustomQrCode.Builder(Context context, ImageView imgQrCode, String text);
 
-    // Optional
-    builder.setSize(int size).setResource(int drawable).setProgress(View progress);
+// Optional
+builder.setSize(int size).setResource(int drawable).setProgress(View progress);
 
-    builder.build().execute();
+builder.build().execute();
 ```
 
 
 Example
 ----------
 ```java
-    CustomQrCode.Builder builder = CustomQrCode.Builder(this, imgQrCode, "Hello World");
-    builder.setSize(512).setResource(R.drawable.smiley).setProgress(progress);
+CustomQrCode.Builder builder = CustomQrCode.Builder(this, imgQrCode, "Hello World");
+builder.setSize(512).setResource(R.drawable.smiley).setProgress(progress);
 
-    builder.build().execute();
+builder.build().execute();
 ```
