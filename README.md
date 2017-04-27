@@ -1,5 +1,9 @@
 Android library for build QrCodes with inside images.
-===============================
+=====================================================
+
+<div align="center">
+<img src=".github/device.png" width="280" height="498" alt="Device Print with CustomQrCode"/>
+</div>
 
 Usage Maven Repo
 ----------------
